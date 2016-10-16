@@ -1,7 +1,6 @@
 package com.example;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -23,15 +22,6 @@ public class SpringstarterApplication {
 	}
 	
 	
-	
-	@Bean
-	CommandLineRunner init(JournalRepository repo){
-		return args -> {
-			System.out.println("---------------------------------");
-	        repo.findAll().forEach(System.out::println);
-	        System.out.println("---------------------------------");
-		};
-	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringstarterApplication.class, args);
